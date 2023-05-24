@@ -1,0 +1,21 @@
+Entities (in Core) store class representations of database tables
+
+dotnet-ef tool for entity framework (nuget packages)
+dotnet tool install --global dotnet-ef --version 7.0.5
+- Make sure to match dotnet-ef version to .NET runtime version
+
+dotnet ef migrations add <Migration_Name> -o <Output_Folder>
+- adds a migration for entities
+
+dotnet ef database update
+- updates the database with migrations that have been added with the above
+
+===========
+In Program.cs
+===========
+(Adding services to the container)
+builder.Services.AddScoped - lifetime of the services is the scope of the http request
+- once the request is finished the class using this service is disposed of
+builder.Services.AddTransient - create/instantiate this service just while it's used inside its enclosing method
+builder.Services.AddSingleton - service starteds when application is started and  kept alive until application is shut down
+
