@@ -1,3 +1,13 @@
 <div class="container mt-5">
-  <h1>Server Error</h1>
+  <h4>Internal server error - refreshing the page will make this error dissapear</h4>
+  <ng-container *ngIf='error'>
+    <h5 class='text-danger'>Error: {{error.message}}</h5>
+    <p class="font-weight-bold">This error comes from the server, not the client</p>
+    <p>What to do next?</p>
+    <ol>
+      <li>Check the network reqeusts in devtools</li>
+    </ol>
+    <h5>Stack Trace</h5>
+    <code class="mt-5" style='background-color:whitesmoke'>{{error.details}}</code>
+  </ng-container>
 </div>
