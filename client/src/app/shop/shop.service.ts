@@ -1,5 +1,5 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
-import { Injectable} from '@angular/core';
+import { Injectable } from '@angular/core';
 import { Pagination } from '../models/pagination';
 import { Product } from '../models/product';
 import { Brand } from '../models/brand';
